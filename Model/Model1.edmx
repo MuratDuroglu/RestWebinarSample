@@ -1,0 +1,838 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="TIGERENTModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="LG_990_01_EBOOKDETAILDOC">
+          <Key>
+            <PropertyRef Name="LOGICALREF" />
+          </Key>
+          <Property Name="LOGICALREF" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="EMFICHEREF" Type="int" />
+          <Property Name="DOCUMENTTYPE" Type="smallint" />
+          <Property Name="EXPLAIN" Type="varchar" MaxLength="51" />
+          <Property Name="DOCUMENTNR" Type="varchar" MaxLength="33" />
+          <Property Name="DOCUMENTDATE" Type="datetime" />
+          <Property Name="PAYTYPE" Type="varchar" MaxLength="51" />
+          <Property Name="UNDOCUMENTED" Type="smallint" />
+          <Property Name="NOPAYMENT" Type="smallint" />
+          <Property Name="EMFLINEREF" Type="int" />
+          <Property Name="MODULENR" Type="smallint" />
+          <Property Name="SOURCEFREF" Type="int" />
+        </EntityType>
+        <EntityType Name="LG_990_01_EMFICHE">
+          <Key>
+            <PropertyRef Name="LOGICALREF" />
+          </Key>
+          <Property Name="LOGICALREF" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TRCODE" Type="smallint" />
+          <Property Name="FICHENO" Type="varchar" MaxLength="33" />
+          <Property Name="DATE_" Type="datetime" />
+          <Property Name="SPECODE" Type="varchar" MaxLength="11" />
+          <Property Name="CYPHCODE" Type="varchar" MaxLength="11" />
+          <Property Name="DOCODE" Type="varchar" MaxLength="33" />
+          <Property Name="BRANCH" Type="smallint" />
+          <Property Name="DEPARTMENT" Type="smallint" />
+          <Property Name="MODULENO" Type="smallint" />
+          <Property Name="SOURCEFREF" Type="int" />
+          <Property Name="EXTENREF" Type="int" />
+          <Property Name="GENEXP1" Type="varchar" MaxLength="51" />
+          <Property Name="GENEXP2" Type="varchar" MaxLength="51" />
+          <Property Name="GENEXP3" Type="varchar" MaxLength="51" />
+          <Property Name="GENEXP4" Type="varchar" MaxLength="51" />
+          <Property Name="GENEXP5" Type="varchar" MaxLength="51" />
+          <Property Name="GENEXP6" Type="varchar" MaxLength="51" />
+          <Property Name="JOURNALNO" Type="int" />
+          <Property Name="TOTALACTIVE" Type="float" />
+          <Property Name="TOTALPASSIVE" Type="float" />
+          <Property Name="CANCELLED" Type="smallint" />
+          <Property Name="PRINTCNT" Type="smallint" />
+          <Property Name="CAPIBLOCK_CREATEDBY" Type="smallint" />
+          <Property Name="CAPIBLOCK_CREADEDDATE" Type="datetime" />
+          <Property Name="CAPIBLOCK_CREATEDHOUR" Type="smallint" />
+          <Property Name="CAPIBLOCK_CREATEDMIN" Type="smallint" />
+          <Property Name="CAPIBLOCK_CREATEDSEC" Type="smallint" />
+          <Property Name="CAPIBLOCK_MODIFIEDBY" Type="smallint" />
+          <Property Name="CAPIBLOCK_MODIFIEDDATE" Type="datetime" />
+          <Property Name="CAPIBLOCK_MODIFIEDHOUR" Type="smallint" />
+          <Property Name="CAPIBLOCK_MODIFIEDMIN" Type="smallint" />
+          <Property Name="CAPIBLOCK_MODIFIEDSEC" Type="smallint" />
+          <Property Name="MODULENR" Type="smallint" />
+          <Property Name="CANCFREF" Type="int" />
+          <Property Name="EMUTOTACTIVE" Type="float" />
+          <Property Name="EMUTOTPASSIVE" Type="float" />
+          <Property Name="GENEXCTYP" Type="smallint" />
+          <Property Name="LINEEXCTYP" Type="smallint" />
+          <Property Name="SITEID" Type="smallint" />
+          <Property Name="RECSTATUS" Type="smallint" />
+          <Property Name="ORGLOGICALREF" Type="int" />
+          <Property Name="REPTOTACTIVE" Type="float" />
+          <Property Name="REPTOTPASSIVE" Type="float" />
+          <Property Name="TEXTINC" Type="smallint" />
+          <Property Name="WFSTATUS" Type="int" />
+          <Property Name="CROSSFREF" Type="int" />
+          <Property Name="CROSSFLAG" Type="smallint" />
+          <Property Name="DOCTYPE" Type="smallint" />
+          <Property Name="ORGLOGOID" Type="varchar" MaxLength="25" />
+          <Property Name="STATUS" Type="smallint" />
+          <Property Name="BDGTFCTYPE" Type="smallint" />
+          <Property Name="BDGTFCREF" Type="int" />
+          <Property Name="FROMDEMTYPE" Type="smallint" />
+          <Property Name="EMDEMFCREF" Type="int" />
+          <Property Name="WFLOWCRDREF" Type="int" />
+          <Property Name="VIAAUTOGL" Type="smallint" />
+          <Property Name="APPROVE" Type="smallint" />
+          <Property Name="APPROVEDATE" Type="datetime" />
+          <Property Name="DOCDATE" Type="datetime" />
+          <Property Name="BATCHTYPE" Type="smallint" />
+          <Property Name="GUID" Type="varchar" MaxLength="37" />
+          <Property Name="LINEBASEDDOCDET" Type="smallint" />
+          <Property Name="ISIMPDISTFC" Type="smallint" />
+          <Property Name="PRINTDATE" Type="datetime" />
+          <Property Name="PROJECTREF" Type="int" />
+          <Property Name="PERSBEGDATE" Type="datetime" />
+          <Property Name="PERSENDDATE" Type="datetime" />
+          <Property Name="RECHASH" Type="varchar" MaxLength="100" />
+          <Property Name="CONTROLINFO" Type="smallint" />
+          <Property Name="NOTIFYCRDREF" Type="int" />
+        </EntityType>
+        <EntityType Name="LG_990_01_EMFLINE">
+          <Key>
+            <PropertyRef Name="LOGICALREF" />
+          </Key>
+          <Property Name="LOGICALREF" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DATE_" Type="datetime" />
+          <Property Name="SIGN" Type="smallint" />
+          <Property Name="ACCOUNTREF" Type="int" />
+          <Property Name="ACCFICHEREF" Type="int" />
+          <Property Name="CENTERREF" Type="int" />
+          <Property Name="TRCODE" Type="smallint" />
+          <Property Name="BRANCH" Type="smallint" />
+          <Property Name="KEBIRCODE" Type="varchar" MaxLength="101" />
+          <Property Name="ACCOUNTCODE" Type="varchar" MaxLength="101" />
+          <Property Name="SPECODE" Type="varchar" MaxLength="17" />
+          <Property Name="DEBIT" Type="float" />
+          <Property Name="CREDIT" Type="float" />
+          <Property Name="LINENO_" Type="smallint" />
+          <Property Name="LINEEXP" Type="varchar" MaxLength="251" />
+          <Property Name="CANCELLED" Type="smallint" />
+          <Property Name="TRCURR" Type="smallint" />
+          <Property Name="CURRDIFFCALC" Type="smallint" />
+          <Property Name="REPORTRATE" Type="float" />
+          <Property Name="REPORTNET" Type="float" />
+          <Property Name="TRRATE" Type="float" />
+          <Property Name="TRNET" Type="float" />
+          <Property Name="AMNT" Type="float" />
+          <Property Name="EXTENREF" Type="int" />
+          <Property Name="EMUDEBIT" Type="float" />
+          <Property Name="EMUCREDIT" Type="float" />
+          <Property Name="LINEEXCTYP" Type="smallint" />
+          <Property Name="CROSSCODE" Type="varchar" MaxLength="101" />
+          <Property Name="SITEID" Type="smallint" />
+          <Property Name="RECSTATUS" Type="smallint" />
+          <Property Name="ORGLOGICREF" Type="int" />
+          <Property Name="INFIDX" Type="float" />
+          <Property Name="NOTINFLATED" Type="smallint" />
+          <Property Name="NOTCALCULATED" Type="smallint" />
+          <Property Name="FROMWHERE" Type="smallint" />
+          <Property Name="OWNERACCREF" Type="int" />
+          <Property Name="DEPARTMENT" Type="smallint" />
+          <Property Name="BDGTLINETYPE" Type="smallint" />
+          <Property Name="STATUS" Type="smallint" />
+          <Property Name="BDGTFCTYPE" Type="smallint" />
+          <Property Name="BDGTFCREF" Type="int" />
+          <Property Name="BDGTFCLNREF" Type="int" />
+          <Property Name="BDGTFCPRDREF" Type="int" />
+          <Property Name="FROMDEMTYPE" Type="smallint" />
+          <Property Name="EMDEMFCREF" Type="int" />
+          <Property Name="EMDEMLNREF" Type="int" />
+          <Property Name="PARENTLNREF" Type="int" />
+          <Property Name="PAIDTOTAL" Type="float" />
+          <Property Name="CLOSED" Type="smallint" />
+          <Property Name="OUTFCTYPE" Type="smallint" />
+          <Property Name="OUTFCREF" Type="int" />
+          <Property Name="CREATEBDGTLN" Type="smallint" />
+          <Property Name="MONTH_" Type="smallint" />
+          <Property Name="YEAR_" Type="smallint" />
+          <Property Name="GRPFIRMTRANS" Type="smallint" />
+          <Property Name="INVOICENO" Type="varchar" MaxLength="17" />
+          <Property Name="CLDEF" Type="varchar" MaxLength="201" />
+          <Property Name="TAXNR" Type="varchar" MaxLength="12" />
+          <Property Name="FORTAXDECL" Type="smallint" />
+          <Property Name="DOCDATE" Type="datetime" />
+          <Property Name="UFRSLNREF" Type="int" />
+          <Property Name="UFRSNETAMNT" Type="float" />
+          <Property Name="GLOBLINENO" Type="int" />
+          <Property Name="LINETYPE" Type="smallint" />
+          <Property Name="CODEREF" Type="int" />
+          <Property Name="SPECODE2" Type="varchar" MaxLength="17" />
+          <Property Name="SOURCEFREF" Type="int" />
+          <Property Name="GUID" Type="varchar" MaxLength="37" />
+          <Property Name="CLCODE" Type="varchar" MaxLength="17" />
+          <Property Name="SOURCEFLNREF" Type="int" />
+          <Property Name="DISTTEMPREF" Type="int" />
+          <Property Name="PROJECTREF" Type="int" />
+          <Property Name="TCKNO" Type="varchar" MaxLength="16" />
+          <Property Name="CASHLINE" Type="smallint" />
+          <Property Name="MNTHLINE" Type="smallint" />
+          <Property Name="MNTHSOURCEREF" Type="int" />
+          <Property Name="MNTHCOUNT" Type="smallint" />
+          <Property Name="ELECTDOC" Type="smallint" />
+        </EntityType>
+        <EntityType Name="LG_990_EMUHACC">
+          <Key>
+            <PropertyRef Name="LOGICALREF" />
+          </Key>
+          <Property Name="LOGICALREF" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ACTIVE" Type="smallint" />
+          <Property Name="CODE" Type="varchar" MaxLength="101" />
+          <Property Name="DEFINITION_" Type="varchar" MaxLength="101" />
+          <Property Name="EXTNAME" Type="varchar" MaxLength="101" />
+          <Property Name="SPECODE" Type="varchar" MaxLength="11" />
+          <Property Name="CYPHCODE" Type="varchar" MaxLength="11" />
+          <Property Name="UNITS" Type="varchar" MaxLength="5" />
+          <Property Name="ADDINFOPTR" Type="int" />
+          <Property Name="CENTERREF" Type="int" />
+          <Property Name="CURRDIFREF" Type="int" />
+          <Property Name="SUBACCOUNTS" Type="int" />
+          <Property Name="LEVEL_" Type="smallint" />
+          <Property Name="GROUPCODE" Type="smallint" />
+          <Property Name="ACCTYPE" Type="smallint" />
+          <Property Name="QUANCTRL" Type="smallint" />
+          <Property Name="CENTERCTRL" Type="smallint" />
+          <Property Name="EXTENREF" Type="int" />
+          <Property Name="CAPIBLOCK_CREATEDBY" Type="smallint" />
+          <Property Name="CAPIBLOCK_CREADEDDATE" Type="datetime" />
+          <Property Name="CAPIBLOCK_CREATEDHOUR" Type="smallint" />
+          <Property Name="CAPIBLOCK_CREATEDMIN" Type="smallint" />
+          <Property Name="CAPIBLOCK_CREATEDSEC" Type="smallint" />
+          <Property Name="CAPIBLOCK_MODIFIEDBY" Type="smallint" />
+          <Property Name="CAPIBLOCK_MODIFIEDDATE" Type="datetime" />
+          <Property Name="CAPIBLOCK_MODIFIEDHOUR" Type="smallint" />
+          <Property Name="CAPIBLOCK_MODIFIEDMIN" Type="smallint" />
+          <Property Name="CAPIBLOCK_MODIFIEDSEC" Type="smallint" />
+          <Property Name="SITEID" Type="smallint" />
+          <Property Name="RECSTATUS" Type="smallint" />
+          <Property Name="ORGLOGICALREF" Type="int" />
+          <Property Name="WFSTATUS" Type="int" />
+          <Property Name="POSTINGONLY" Type="smallint" />
+          <Property Name="CATEGORY" Type="int" />
+          <Property Name="FTFLAGS" Type="varchar" MaxLength="51" />
+          <Property Name="MONETARY" Type="smallint" />
+          <Property Name="PROJECTCTRL" Type="smallint" />
+          <Property Name="NOTINFLATED" Type="smallint" />
+          <Property Name="CURRDIFFDEBTREF" Type="int" />
+          <Property Name="INFDIFFACCREF" Type="int" />
+          <Property Name="ISANBDGTLINE" Type="smallint" />
+          <Property Name="BDGTACCREF" Type="int" />
+          <Property Name="BDREFLACCREF" Type="int" />
+          <Property Name="BDGTPAYAREF" Type="int" />
+          <Property Name="BDPAYREFLAREF" Type="int" />
+          <Property Name="CRBDGTACCLN" Type="smallint" />
+          <Property Name="CRBDGTPAYALN" Type="smallint" />
+          <Property Name="CORPCODE1" Type="varchar" MaxLength="3" />
+          <Property Name="CORPCODE2" Type="varchar" MaxLength="3" />
+          <Property Name="CORPCODE3" Type="varchar" MaxLength="3" />
+          <Property Name="CORPCODE4" Type="varchar" MaxLength="3" />
+          <Property Name="FUNCCODE1" Type="varchar" MaxLength="3" />
+          <Property Name="FUNCCODE2" Type="varchar" MaxLength="3" />
+          <Property Name="FUNCCODE3" Type="varchar" MaxLength="3" />
+          <Property Name="FUNCCODE4" Type="varchar" MaxLength="3" />
+          <Property Name="FINCODE" Type="varchar" MaxLength="3" />
+          <Property Name="ECOCODE1" Type="varchar" MaxLength="3" />
+          <Property Name="ECOCODE2" Type="varchar" MaxLength="3" />
+          <Property Name="ECOCODE3" Type="varchar" MaxLength="3" />
+          <Property Name="ECOCODE4" Type="varchar" MaxLength="3" />
+          <Property Name="VATREFLAREF" Type="int" />
+          <Property Name="VATREFLOTHAREF" Type="int" />
+          <Property Name="CCURRENCY" Type="smallint" />
+          <Property Name="CURRATETYPE" Type="smallint" />
+          <Property Name="FIXEDCURRTYPE" Type="smallint" />
+          <Property Name="CLDEF" Type="varchar" MaxLength="201" />
+          <Property Name="TAXNR" Type="varchar" MaxLength="12" />
+          <Property Name="FORTAXDECL" Type="smallint" />
+          <Property Name="VATACC" Type="smallint" />
+          <Property Name="GRPTRANSACCREF" Type="int" />
+          <Property Name="SPECODE2" Type="varchar" MaxLength="11" />
+          <Property Name="SPECODE3" Type="varchar" MaxLength="11" />
+          <Property Name="SPECODE4" Type="varchar" MaxLength="11" />
+          <Property Name="SPECODE5" Type="varchar" MaxLength="11" />
+          <Property Name="TCKNO" Type="varchar" MaxLength="16" />
+          <Property Name="ISPERSCOMP" Type="smallint" />
+          <Property Name="ISCASH" Type="smallint" />
+          <Property Name="TEXTINC" Type="smallint" />
+          <Property Name="TEXTINCENG" Type="smallint" />
+        </EntityType>
+        <EntityContainer Name="TIGERENTModelStoreContainer">
+          <EntitySet Name="LG_990_01_EBOOKDETAILDOC" EntityType="Self.LG_990_01_EBOOKDETAILDOC" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LG_990_01_EMFICHE" EntityType="Self.LG_990_01_EMFICHE" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LG_990_01_EMFLINE" EntityType="Self.LG_990_01_EMFLINE" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LG_990_EMUHACC" EntityType="Self.LG_990_EMUHACC" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="TIGERENTModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="LG_990_01_EBOOKDETAILDOC">
+          <Key>
+            <PropertyRef Name="LOGICALREF" />
+          </Key>
+          <Property Name="LOGICALREF" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="EMFICHEREF" Type="Int32" />
+          <Property Name="DOCUMENTTYPE" Type="Int16" />
+          <Property Name="EXPLAIN" Type="String" MaxLength="51" FixedLength="false" Unicode="false" />
+          <Property Name="DOCUMENTNR" Type="String" MaxLength="33" FixedLength="false" Unicode="false" />
+          <Property Name="DOCUMENTDATE" Type="DateTime" Precision="3" />
+          <Property Name="PAYTYPE" Type="String" MaxLength="51" FixedLength="false" Unicode="false" />
+          <Property Name="UNDOCUMENTED" Type="Int16" />
+          <Property Name="NOPAYMENT" Type="Int16" />
+          <Property Name="EMFLINEREF" Type="Int32" />
+          <Property Name="MODULENR" Type="Int16" />
+          <Property Name="SOURCEFREF" Type="Int32" />
+        </EntityType>
+        <EntityType Name="LG_990_01_EMFICHE">
+          <Key>
+            <PropertyRef Name="LOGICALREF" />
+          </Key>
+          <Property Name="LOGICALREF" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TRCODE" Type="Int16" />
+          <Property Name="FICHENO" Type="String" MaxLength="33" FixedLength="false" Unicode="false" />
+          <Property Name="DATE_" Type="DateTime" Precision="3" />
+          <Property Name="SPECODE" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+          <Property Name="CYPHCODE" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+          <Property Name="DOCODE" Type="String" MaxLength="33" FixedLength="false" Unicode="false" />
+          <Property Name="BRANCH" Type="Int16" />
+          <Property Name="DEPARTMENT" Type="Int16" />
+          <Property Name="MODULENO" Type="Int16" />
+          <Property Name="SOURCEFREF" Type="Int32" />
+          <Property Name="EXTENREF" Type="Int32" />
+          <Property Name="GENEXP1" Type="String" MaxLength="51" FixedLength="false" Unicode="false" />
+          <Property Name="GENEXP2" Type="String" MaxLength="51" FixedLength="false" Unicode="false" />
+          <Property Name="GENEXP3" Type="String" MaxLength="51" FixedLength="false" Unicode="false" />
+          <Property Name="GENEXP4" Type="String" MaxLength="51" FixedLength="false" Unicode="false" />
+          <Property Name="GENEXP5" Type="String" MaxLength="51" FixedLength="false" Unicode="false" />
+          <Property Name="GENEXP6" Type="String" MaxLength="51" FixedLength="false" Unicode="false" />
+          <Property Name="JOURNALNO" Type="Int32" />
+          <Property Name="TOTALACTIVE" Type="Double" />
+          <Property Name="TOTALPASSIVE" Type="Double" />
+          <Property Name="CANCELLED" Type="Int16" />
+          <Property Name="PRINTCNT" Type="Int16" />
+          <Property Name="CAPIBLOCK_CREATEDBY" Type="Int16" />
+          <Property Name="CAPIBLOCK_CREADEDDATE" Type="DateTime" Precision="3" />
+          <Property Name="CAPIBLOCK_CREATEDHOUR" Type="Int16" />
+          <Property Name="CAPIBLOCK_CREATEDMIN" Type="Int16" />
+          <Property Name="CAPIBLOCK_CREATEDSEC" Type="Int16" />
+          <Property Name="CAPIBLOCK_MODIFIEDBY" Type="Int16" />
+          <Property Name="CAPIBLOCK_MODIFIEDDATE" Type="DateTime" Precision="3" />
+          <Property Name="CAPIBLOCK_MODIFIEDHOUR" Type="Int16" />
+          <Property Name="CAPIBLOCK_MODIFIEDMIN" Type="Int16" />
+          <Property Name="CAPIBLOCK_MODIFIEDSEC" Type="Int16" />
+          <Property Name="MODULENR" Type="Int16" />
+          <Property Name="CANCFREF" Type="Int32" />
+          <Property Name="EMUTOTACTIVE" Type="Double" />
+          <Property Name="EMUTOTPASSIVE" Type="Double" />
+          <Property Name="GENEXCTYP" Type="Int16" />
+          <Property Name="LINEEXCTYP" Type="Int16" />
+          <Property Name="SITEID" Type="Int16" />
+          <Property Name="RECSTATUS" Type="Int16" />
+          <Property Name="ORGLOGICALREF" Type="Int32" />
+          <Property Name="REPTOTACTIVE" Type="Double" />
+          <Property Name="REPTOTPASSIVE" Type="Double" />
+          <Property Name="TEXTINC" Type="Int16" />
+          <Property Name="WFSTATUS" Type="Int32" />
+          <Property Name="CROSSFREF" Type="Int32" />
+          <Property Name="CROSSFLAG" Type="Int16" />
+          <Property Name="DOCTYPE" Type="Int16" />
+          <Property Name="ORGLOGOID" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="STATUS" Type="Int16" />
+          <Property Name="BDGTFCTYPE" Type="Int16" />
+          <Property Name="BDGTFCREF" Type="Int32" />
+          <Property Name="FROMDEMTYPE" Type="Int16" />
+          <Property Name="EMDEMFCREF" Type="Int32" />
+          <Property Name="WFLOWCRDREF" Type="Int32" />
+          <Property Name="VIAAUTOGL" Type="Int16" />
+          <Property Name="APPROVE" Type="Int16" />
+          <Property Name="APPROVEDATE" Type="DateTime" Precision="3" />
+          <Property Name="DOCDATE" Type="DateTime" Precision="3" />
+          <Property Name="BATCHTYPE" Type="Int16" />
+          <Property Name="GUID" Type="String" MaxLength="37" FixedLength="false" Unicode="false" />
+          <Property Name="LINEBASEDDOCDET" Type="Int16" />
+          <Property Name="ISIMPDISTFC" Type="Int16" />
+          <Property Name="PRINTDATE" Type="DateTime" Precision="3" />
+          <Property Name="PROJECTREF" Type="Int32" />
+          <Property Name="PERSBEGDATE" Type="DateTime" Precision="3" />
+          <Property Name="PERSENDDATE" Type="DateTime" Precision="3" />
+          <Property Name="RECHASH" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="CONTROLINFO" Type="Int16" />
+          <Property Name="NOTIFYCRDREF" Type="Int32" />
+        </EntityType>
+        <EntityType Name="LG_990_01_EMFLINE">
+          <Key>
+            <PropertyRef Name="LOGICALREF" />
+          </Key>
+          <Property Name="LOGICALREF" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DATE_" Type="DateTime" Precision="3" />
+          <Property Name="SIGN" Type="Int16" />
+          <Property Name="ACCOUNTREF" Type="Int32" />
+          <Property Name="ACCFICHEREF" Type="Int32" />
+          <Property Name="CENTERREF" Type="Int32" />
+          <Property Name="TRCODE" Type="Int16" />
+          <Property Name="BRANCH" Type="Int16" />
+          <Property Name="KEBIRCODE" Type="String" MaxLength="101" FixedLength="false" Unicode="false" />
+          <Property Name="ACCOUNTCODE" Type="String" MaxLength="101" FixedLength="false" Unicode="false" />
+          <Property Name="SPECODE" Type="String" MaxLength="17" FixedLength="false" Unicode="false" />
+          <Property Name="DEBIT" Type="Double" />
+          <Property Name="CREDIT" Type="Double" />
+          <Property Name="LINENO_" Type="Int16" />
+          <Property Name="LINEEXP" Type="String" MaxLength="251" FixedLength="false" Unicode="false" />
+          <Property Name="CANCELLED" Type="Int16" />
+          <Property Name="TRCURR" Type="Int16" />
+          <Property Name="CURRDIFFCALC" Type="Int16" />
+          <Property Name="REPORTRATE" Type="Double" />
+          <Property Name="REPORTNET" Type="Double" />
+          <Property Name="TRRATE" Type="Double" />
+          <Property Name="TRNET" Type="Double" />
+          <Property Name="AMNT" Type="Double" />
+          <Property Name="EXTENREF" Type="Int32" />
+          <Property Name="EMUDEBIT" Type="Double" />
+          <Property Name="EMUCREDIT" Type="Double" />
+          <Property Name="LINEEXCTYP" Type="Int16" />
+          <Property Name="CROSSCODE" Type="String" MaxLength="101" FixedLength="false" Unicode="false" />
+          <Property Name="SITEID" Type="Int16" />
+          <Property Name="RECSTATUS" Type="Int16" />
+          <Property Name="ORGLOGICREF" Type="Int32" />
+          <Property Name="INFIDX" Type="Double" />
+          <Property Name="NOTINFLATED" Type="Int16" />
+          <Property Name="NOTCALCULATED" Type="Int16" />
+          <Property Name="FROMWHERE" Type="Int16" />
+          <Property Name="OWNERACCREF" Type="Int32" />
+          <Property Name="DEPARTMENT" Type="Int16" />
+          <Property Name="BDGTLINETYPE" Type="Int16" />
+          <Property Name="STATUS" Type="Int16" />
+          <Property Name="BDGTFCTYPE" Type="Int16" />
+          <Property Name="BDGTFCREF" Type="Int32" />
+          <Property Name="BDGTFCLNREF" Type="Int32" />
+          <Property Name="BDGTFCPRDREF" Type="Int32" />
+          <Property Name="FROMDEMTYPE" Type="Int16" />
+          <Property Name="EMDEMFCREF" Type="Int32" />
+          <Property Name="EMDEMLNREF" Type="Int32" />
+          <Property Name="PARENTLNREF" Type="Int32" />
+          <Property Name="PAIDTOTAL" Type="Double" />
+          <Property Name="CLOSED" Type="Int16" />
+          <Property Name="OUTFCTYPE" Type="Int16" />
+          <Property Name="OUTFCREF" Type="Int32" />
+          <Property Name="CREATEBDGTLN" Type="Int16" />
+          <Property Name="MONTH_" Type="Int16" />
+          <Property Name="YEAR_" Type="Int16" />
+          <Property Name="GRPFIRMTRANS" Type="Int16" />
+          <Property Name="INVOICENO" Type="String" MaxLength="17" FixedLength="false" Unicode="false" />
+          <Property Name="CLDEF" Type="String" MaxLength="201" FixedLength="false" Unicode="false" />
+          <Property Name="TAXNR" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="FORTAXDECL" Type="Int16" />
+          <Property Name="DOCDATE" Type="DateTime" Precision="3" />
+          <Property Name="UFRSLNREF" Type="Int32" />
+          <Property Name="UFRSNETAMNT" Type="Double" />
+          <Property Name="GLOBLINENO" Type="Int32" />
+          <Property Name="LINETYPE" Type="Int16" />
+          <Property Name="CODEREF" Type="Int32" />
+          <Property Name="SPECODE2" Type="String" MaxLength="17" FixedLength="false" Unicode="false" />
+          <Property Name="SOURCEFREF" Type="Int32" />
+          <Property Name="GUID" Type="String" MaxLength="37" FixedLength="false" Unicode="false" />
+          <Property Name="CLCODE" Type="String" MaxLength="17" FixedLength="false" Unicode="false" />
+          <Property Name="SOURCEFLNREF" Type="Int32" />
+          <Property Name="DISTTEMPREF" Type="Int32" />
+          <Property Name="PROJECTREF" Type="Int32" />
+          <Property Name="TCKNO" Type="String" MaxLength="16" FixedLength="false" Unicode="false" />
+          <Property Name="CASHLINE" Type="Int16" />
+          <Property Name="MNTHLINE" Type="Int16" />
+          <Property Name="MNTHSOURCEREF" Type="Int32" />
+          <Property Name="MNTHCOUNT" Type="Int16" />
+          <Property Name="ELECTDOC" Type="Int16" />
+        </EntityType>
+        <EntityType Name="LG_990_EMUHACC">
+          <Key>
+            <PropertyRef Name="LOGICALREF" />
+          </Key>
+          <Property Name="LOGICALREF" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ACTIVE" Type="Int16" />
+          <Property Name="CODE" Type="String" MaxLength="101" FixedLength="false" Unicode="false" />
+          <Property Name="DEFINITION_" Type="String" MaxLength="101" FixedLength="false" Unicode="false" />
+          <Property Name="EXTNAME" Type="String" MaxLength="101" FixedLength="false" Unicode="false" />
+          <Property Name="SPECODE" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+          <Property Name="CYPHCODE" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+          <Property Name="UNITS" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="ADDINFOPTR" Type="Int32" />
+          <Property Name="CENTERREF" Type="Int32" />
+          <Property Name="CURRDIFREF" Type="Int32" />
+          <Property Name="SUBACCOUNTS" Type="Int32" />
+          <Property Name="LEVEL_" Type="Int16" />
+          <Property Name="GROUPCODE" Type="Int16" />
+          <Property Name="ACCTYPE" Type="Int16" />
+          <Property Name="QUANCTRL" Type="Int16" />
+          <Property Name="CENTERCTRL" Type="Int16" />
+          <Property Name="EXTENREF" Type="Int32" />
+          <Property Name="CAPIBLOCK_CREATEDBY" Type="Int16" />
+          <Property Name="CAPIBLOCK_CREADEDDATE" Type="DateTime" Precision="3" />
+          <Property Name="CAPIBLOCK_CREATEDHOUR" Type="Int16" />
+          <Property Name="CAPIBLOCK_CREATEDMIN" Type="Int16" />
+          <Property Name="CAPIBLOCK_CREATEDSEC" Type="Int16" />
+          <Property Name="CAPIBLOCK_MODIFIEDBY" Type="Int16" />
+          <Property Name="CAPIBLOCK_MODIFIEDDATE" Type="DateTime" Precision="3" />
+          <Property Name="CAPIBLOCK_MODIFIEDHOUR" Type="Int16" />
+          <Property Name="CAPIBLOCK_MODIFIEDMIN" Type="Int16" />
+          <Property Name="CAPIBLOCK_MODIFIEDSEC" Type="Int16" />
+          <Property Name="SITEID" Type="Int16" />
+          <Property Name="RECSTATUS" Type="Int16" />
+          <Property Name="ORGLOGICALREF" Type="Int32" />
+          <Property Name="WFSTATUS" Type="Int32" />
+          <Property Name="POSTINGONLY" Type="Int16" />
+          <Property Name="CATEGORY" Type="Int32" />
+          <Property Name="FTFLAGS" Type="String" MaxLength="51" FixedLength="false" Unicode="false" />
+          <Property Name="MONETARY" Type="Int16" />
+          <Property Name="PROJECTCTRL" Type="Int16" />
+          <Property Name="NOTINFLATED" Type="Int16" />
+          <Property Name="CURRDIFFDEBTREF" Type="Int32" />
+          <Property Name="INFDIFFACCREF" Type="Int32" />
+          <Property Name="ISANBDGTLINE" Type="Int16" />
+          <Property Name="BDGTACCREF" Type="Int32" />
+          <Property Name="BDREFLACCREF" Type="Int32" />
+          <Property Name="BDGTPAYAREF" Type="Int32" />
+          <Property Name="BDPAYREFLAREF" Type="Int32" />
+          <Property Name="CRBDGTACCLN" Type="Int16" />
+          <Property Name="CRBDGTPAYALN" Type="Int16" />
+          <Property Name="CORPCODE1" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="CORPCODE2" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="CORPCODE3" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="CORPCODE4" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="FUNCCODE1" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="FUNCCODE2" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="FUNCCODE3" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="FUNCCODE4" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="FINCODE" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="ECOCODE1" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="ECOCODE2" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="ECOCODE3" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="ECOCODE4" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="VATREFLAREF" Type="Int32" />
+          <Property Name="VATREFLOTHAREF" Type="Int32" />
+          <Property Name="CCURRENCY" Type="Int16" />
+          <Property Name="CURRATETYPE" Type="Int16" />
+          <Property Name="FIXEDCURRTYPE" Type="Int16" />
+          <Property Name="CLDEF" Type="String" MaxLength="201" FixedLength="false" Unicode="false" />
+          <Property Name="TAXNR" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="FORTAXDECL" Type="Int16" />
+          <Property Name="VATACC" Type="Int16" />
+          <Property Name="GRPTRANSACCREF" Type="Int32" />
+          <Property Name="SPECODE2" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+          <Property Name="SPECODE3" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+          <Property Name="SPECODE4" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+          <Property Name="SPECODE5" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+          <Property Name="TCKNO" Type="String" MaxLength="16" FixedLength="false" Unicode="false" />
+          <Property Name="ISPERSCOMP" Type="Int16" />
+          <Property Name="ISCASH" Type="Int16" />
+          <Property Name="TEXTINC" Type="Int16" />
+          <Property Name="TEXTINCENG" Type="Int16" />
+        </EntityType>
+        <EntityContainer Name="TIGERENTEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="LG_990_01_EBOOKDETAILDOC" EntityType="Self.LG_990_01_EBOOKDETAILDOC" />
+          <EntitySet Name="LG_990_01_EMFICHE" EntityType="Self.LG_990_01_EMFICHE" />
+          <EntitySet Name="LG_990_01_EMFLINE" EntityType="Self.LG_990_01_EMFLINE" />
+          <EntitySet Name="LG_990_EMUHACC" EntityType="Self.LG_990_EMUHACC" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="TIGERENTModelStoreContainer" CdmEntityContainer="TIGERENTEntities1">
+          <EntitySetMapping Name="LG_990_01_EBOOKDETAILDOC">
+            <EntityTypeMapping TypeName="TIGERENTModel.LG_990_01_EBOOKDETAILDOC">
+              <MappingFragment StoreEntitySet="LG_990_01_EBOOKDETAILDOC">
+                <ScalarProperty Name="LOGICALREF" ColumnName="LOGICALREF" />
+                <ScalarProperty Name="EMFICHEREF" ColumnName="EMFICHEREF" />
+                <ScalarProperty Name="DOCUMENTTYPE" ColumnName="DOCUMENTTYPE" />
+                <ScalarProperty Name="EXPLAIN" ColumnName="EXPLAIN" />
+                <ScalarProperty Name="DOCUMENTNR" ColumnName="DOCUMENTNR" />
+                <ScalarProperty Name="DOCUMENTDATE" ColumnName="DOCUMENTDATE" />
+                <ScalarProperty Name="PAYTYPE" ColumnName="PAYTYPE" />
+                <ScalarProperty Name="UNDOCUMENTED" ColumnName="UNDOCUMENTED" />
+                <ScalarProperty Name="NOPAYMENT" ColumnName="NOPAYMENT" />
+                <ScalarProperty Name="EMFLINEREF" ColumnName="EMFLINEREF" />
+                <ScalarProperty Name="MODULENR" ColumnName="MODULENR" />
+                <ScalarProperty Name="SOURCEFREF" ColumnName="SOURCEFREF" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LG_990_01_EMFICHE">
+            <EntityTypeMapping TypeName="TIGERENTModel.LG_990_01_EMFICHE">
+              <MappingFragment StoreEntitySet="LG_990_01_EMFICHE">
+                <ScalarProperty Name="LOGICALREF" ColumnName="LOGICALREF" />
+                <ScalarProperty Name="TRCODE" ColumnName="TRCODE" />
+                <ScalarProperty Name="FICHENO" ColumnName="FICHENO" />
+                <ScalarProperty Name="DATE_" ColumnName="DATE_" />
+                <ScalarProperty Name="SPECODE" ColumnName="SPECODE" />
+                <ScalarProperty Name="CYPHCODE" ColumnName="CYPHCODE" />
+                <ScalarProperty Name="DOCODE" ColumnName="DOCODE" />
+                <ScalarProperty Name="BRANCH" ColumnName="BRANCH" />
+                <ScalarProperty Name="DEPARTMENT" ColumnName="DEPARTMENT" />
+                <ScalarProperty Name="MODULENO" ColumnName="MODULENO" />
+                <ScalarProperty Name="SOURCEFREF" ColumnName="SOURCEFREF" />
+                <ScalarProperty Name="EXTENREF" ColumnName="EXTENREF" />
+                <ScalarProperty Name="GENEXP1" ColumnName="GENEXP1" />
+                <ScalarProperty Name="GENEXP2" ColumnName="GENEXP2" />
+                <ScalarProperty Name="GENEXP3" ColumnName="GENEXP3" />
+                <ScalarProperty Name="GENEXP4" ColumnName="GENEXP4" />
+                <ScalarProperty Name="GENEXP5" ColumnName="GENEXP5" />
+                <ScalarProperty Name="GENEXP6" ColumnName="GENEXP6" />
+                <ScalarProperty Name="JOURNALNO" ColumnName="JOURNALNO" />
+                <ScalarProperty Name="TOTALACTIVE" ColumnName="TOTALACTIVE" />
+                <ScalarProperty Name="TOTALPASSIVE" ColumnName="TOTALPASSIVE" />
+                <ScalarProperty Name="CANCELLED" ColumnName="CANCELLED" />
+                <ScalarProperty Name="PRINTCNT" ColumnName="PRINTCNT" />
+                <ScalarProperty Name="CAPIBLOCK_CREATEDBY" ColumnName="CAPIBLOCK_CREATEDBY" />
+                <ScalarProperty Name="CAPIBLOCK_CREADEDDATE" ColumnName="CAPIBLOCK_CREADEDDATE" />
+                <ScalarProperty Name="CAPIBLOCK_CREATEDHOUR" ColumnName="CAPIBLOCK_CREATEDHOUR" />
+                <ScalarProperty Name="CAPIBLOCK_CREATEDMIN" ColumnName="CAPIBLOCK_CREATEDMIN" />
+                <ScalarProperty Name="CAPIBLOCK_CREATEDSEC" ColumnName="CAPIBLOCK_CREATEDSEC" />
+                <ScalarProperty Name="CAPIBLOCK_MODIFIEDBY" ColumnName="CAPIBLOCK_MODIFIEDBY" />
+                <ScalarProperty Name="CAPIBLOCK_MODIFIEDDATE" ColumnName="CAPIBLOCK_MODIFIEDDATE" />
+                <ScalarProperty Name="CAPIBLOCK_MODIFIEDHOUR" ColumnName="CAPIBLOCK_MODIFIEDHOUR" />
+                <ScalarProperty Name="CAPIBLOCK_MODIFIEDMIN" ColumnName="CAPIBLOCK_MODIFIEDMIN" />
+                <ScalarProperty Name="CAPIBLOCK_MODIFIEDSEC" ColumnName="CAPIBLOCK_MODIFIEDSEC" />
+                <ScalarProperty Name="MODULENR" ColumnName="MODULENR" />
+                <ScalarProperty Name="CANCFREF" ColumnName="CANCFREF" />
+                <ScalarProperty Name="EMUTOTACTIVE" ColumnName="EMUTOTACTIVE" />
+                <ScalarProperty Name="EMUTOTPASSIVE" ColumnName="EMUTOTPASSIVE" />
+                <ScalarProperty Name="GENEXCTYP" ColumnName="GENEXCTYP" />
+                <ScalarProperty Name="LINEEXCTYP" ColumnName="LINEEXCTYP" />
+                <ScalarProperty Name="SITEID" ColumnName="SITEID" />
+                <ScalarProperty Name="RECSTATUS" ColumnName="RECSTATUS" />
+                <ScalarProperty Name="ORGLOGICALREF" ColumnName="ORGLOGICALREF" />
+                <ScalarProperty Name="REPTOTACTIVE" ColumnName="REPTOTACTIVE" />
+                <ScalarProperty Name="REPTOTPASSIVE" ColumnName="REPTOTPASSIVE" />
+                <ScalarProperty Name="TEXTINC" ColumnName="TEXTINC" />
+                <ScalarProperty Name="WFSTATUS" ColumnName="WFSTATUS" />
+                <ScalarProperty Name="CROSSFREF" ColumnName="CROSSFREF" />
+                <ScalarProperty Name="CROSSFLAG" ColumnName="CROSSFLAG" />
+                <ScalarProperty Name="DOCTYPE" ColumnName="DOCTYPE" />
+                <ScalarProperty Name="ORGLOGOID" ColumnName="ORGLOGOID" />
+                <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+                <ScalarProperty Name="BDGTFCTYPE" ColumnName="BDGTFCTYPE" />
+                <ScalarProperty Name="BDGTFCREF" ColumnName="BDGTFCREF" />
+                <ScalarProperty Name="FROMDEMTYPE" ColumnName="FROMDEMTYPE" />
+                <ScalarProperty Name="EMDEMFCREF" ColumnName="EMDEMFCREF" />
+                <ScalarProperty Name="WFLOWCRDREF" ColumnName="WFLOWCRDREF" />
+                <ScalarProperty Name="VIAAUTOGL" ColumnName="VIAAUTOGL" />
+                <ScalarProperty Name="APPROVE" ColumnName="APPROVE" />
+                <ScalarProperty Name="APPROVEDATE" ColumnName="APPROVEDATE" />
+                <ScalarProperty Name="DOCDATE" ColumnName="DOCDATE" />
+                <ScalarProperty Name="BATCHTYPE" ColumnName="BATCHTYPE" />
+                <ScalarProperty Name="GUID" ColumnName="GUID" />
+                <ScalarProperty Name="LINEBASEDDOCDET" ColumnName="LINEBASEDDOCDET" />
+                <ScalarProperty Name="ISIMPDISTFC" ColumnName="ISIMPDISTFC" />
+                <ScalarProperty Name="PRINTDATE" ColumnName="PRINTDATE" />
+                <ScalarProperty Name="PROJECTREF" ColumnName="PROJECTREF" />
+                <ScalarProperty Name="PERSBEGDATE" ColumnName="PERSBEGDATE" />
+                <ScalarProperty Name="PERSENDDATE" ColumnName="PERSENDDATE" />
+                <ScalarProperty Name="RECHASH" ColumnName="RECHASH" />
+                <ScalarProperty Name="CONTROLINFO" ColumnName="CONTROLINFO" />
+                <ScalarProperty Name="NOTIFYCRDREF" ColumnName="NOTIFYCRDREF" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LG_990_01_EMFLINE">
+            <EntityTypeMapping TypeName="TIGERENTModel.LG_990_01_EMFLINE">
+              <MappingFragment StoreEntitySet="LG_990_01_EMFLINE">
+                <ScalarProperty Name="LOGICALREF" ColumnName="LOGICALREF" />
+                <ScalarProperty Name="DATE_" ColumnName="DATE_" />
+                <ScalarProperty Name="SIGN" ColumnName="SIGN" />
+                <ScalarProperty Name="ACCOUNTREF" ColumnName="ACCOUNTREF" />
+                <ScalarProperty Name="ACCFICHEREF" ColumnName="ACCFICHEREF" />
+                <ScalarProperty Name="CENTERREF" ColumnName="CENTERREF" />
+                <ScalarProperty Name="TRCODE" ColumnName="TRCODE" />
+                <ScalarProperty Name="BRANCH" ColumnName="BRANCH" />
+                <ScalarProperty Name="KEBIRCODE" ColumnName="KEBIRCODE" />
+                <ScalarProperty Name="ACCOUNTCODE" ColumnName="ACCOUNTCODE" />
+                <ScalarProperty Name="SPECODE" ColumnName="SPECODE" />
+                <ScalarProperty Name="DEBIT" ColumnName="DEBIT" />
+                <ScalarProperty Name="CREDIT" ColumnName="CREDIT" />
+                <ScalarProperty Name="LINENO_" ColumnName="LINENO_" />
+                <ScalarProperty Name="LINEEXP" ColumnName="LINEEXP" />
+                <ScalarProperty Name="CANCELLED" ColumnName="CANCELLED" />
+                <ScalarProperty Name="TRCURR" ColumnName="TRCURR" />
+                <ScalarProperty Name="CURRDIFFCALC" ColumnName="CURRDIFFCALC" />
+                <ScalarProperty Name="REPORTRATE" ColumnName="REPORTRATE" />
+                <ScalarProperty Name="REPORTNET" ColumnName="REPORTNET" />
+                <ScalarProperty Name="TRRATE" ColumnName="TRRATE" />
+                <ScalarProperty Name="TRNET" ColumnName="TRNET" />
+                <ScalarProperty Name="AMNT" ColumnName="AMNT" />
+                <ScalarProperty Name="EXTENREF" ColumnName="EXTENREF" />
+                <ScalarProperty Name="EMUDEBIT" ColumnName="EMUDEBIT" />
+                <ScalarProperty Name="EMUCREDIT" ColumnName="EMUCREDIT" />
+                <ScalarProperty Name="LINEEXCTYP" ColumnName="LINEEXCTYP" />
+                <ScalarProperty Name="CROSSCODE" ColumnName="CROSSCODE" />
+                <ScalarProperty Name="SITEID" ColumnName="SITEID" />
+                <ScalarProperty Name="RECSTATUS" ColumnName="RECSTATUS" />
+                <ScalarProperty Name="ORGLOGICREF" ColumnName="ORGLOGICREF" />
+                <ScalarProperty Name="INFIDX" ColumnName="INFIDX" />
+                <ScalarProperty Name="NOTINFLATED" ColumnName="NOTINFLATED" />
+                <ScalarProperty Name="NOTCALCULATED" ColumnName="NOTCALCULATED" />
+                <ScalarProperty Name="FROMWHERE" ColumnName="FROMWHERE" />
+                <ScalarProperty Name="OWNERACCREF" ColumnName="OWNERACCREF" />
+                <ScalarProperty Name="DEPARTMENT" ColumnName="DEPARTMENT" />
+                <ScalarProperty Name="BDGTLINETYPE" ColumnName="BDGTLINETYPE" />
+                <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+                <ScalarProperty Name="BDGTFCTYPE" ColumnName="BDGTFCTYPE" />
+                <ScalarProperty Name="BDGTFCREF" ColumnName="BDGTFCREF" />
+                <ScalarProperty Name="BDGTFCLNREF" ColumnName="BDGTFCLNREF" />
+                <ScalarProperty Name="BDGTFCPRDREF" ColumnName="BDGTFCPRDREF" />
+                <ScalarProperty Name="FROMDEMTYPE" ColumnName="FROMDEMTYPE" />
+                <ScalarProperty Name="EMDEMFCREF" ColumnName="EMDEMFCREF" />
+                <ScalarProperty Name="EMDEMLNREF" ColumnName="EMDEMLNREF" />
+                <ScalarProperty Name="PARENTLNREF" ColumnName="PARENTLNREF" />
+                <ScalarProperty Name="PAIDTOTAL" ColumnName="PAIDTOTAL" />
+                <ScalarProperty Name="CLOSED" ColumnName="CLOSED" />
+                <ScalarProperty Name="OUTFCTYPE" ColumnName="OUTFCTYPE" />
+                <ScalarProperty Name="OUTFCREF" ColumnName="OUTFCREF" />
+                <ScalarProperty Name="CREATEBDGTLN" ColumnName="CREATEBDGTLN" />
+                <ScalarProperty Name="MONTH_" ColumnName="MONTH_" />
+                <ScalarProperty Name="YEAR_" ColumnName="YEAR_" />
+                <ScalarProperty Name="GRPFIRMTRANS" ColumnName="GRPFIRMTRANS" />
+                <ScalarProperty Name="INVOICENO" ColumnName="INVOICENO" />
+                <ScalarProperty Name="CLDEF" ColumnName="CLDEF" />
+                <ScalarProperty Name="TAXNR" ColumnName="TAXNR" />
+                <ScalarProperty Name="FORTAXDECL" ColumnName="FORTAXDECL" />
+                <ScalarProperty Name="DOCDATE" ColumnName="DOCDATE" />
+                <ScalarProperty Name="UFRSLNREF" ColumnName="UFRSLNREF" />
+                <ScalarProperty Name="UFRSNETAMNT" ColumnName="UFRSNETAMNT" />
+                <ScalarProperty Name="GLOBLINENO" ColumnName="GLOBLINENO" />
+                <ScalarProperty Name="LINETYPE" ColumnName="LINETYPE" />
+                <ScalarProperty Name="CODEREF" ColumnName="CODEREF" />
+                <ScalarProperty Name="SPECODE2" ColumnName="SPECODE2" />
+                <ScalarProperty Name="SOURCEFREF" ColumnName="SOURCEFREF" />
+                <ScalarProperty Name="GUID" ColumnName="GUID" />
+                <ScalarProperty Name="CLCODE" ColumnName="CLCODE" />
+                <ScalarProperty Name="SOURCEFLNREF" ColumnName="SOURCEFLNREF" />
+                <ScalarProperty Name="DISTTEMPREF" ColumnName="DISTTEMPREF" />
+                <ScalarProperty Name="PROJECTREF" ColumnName="PROJECTREF" />
+                <ScalarProperty Name="TCKNO" ColumnName="TCKNO" />
+                <ScalarProperty Name="CASHLINE" ColumnName="CASHLINE" />
+                <ScalarProperty Name="MNTHLINE" ColumnName="MNTHLINE" />
+                <ScalarProperty Name="MNTHSOURCEREF" ColumnName="MNTHSOURCEREF" />
+                <ScalarProperty Name="MNTHCOUNT" ColumnName="MNTHCOUNT" />
+                <ScalarProperty Name="ELECTDOC" ColumnName="ELECTDOC" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LG_990_EMUHACC">
+            <EntityTypeMapping TypeName="TIGERENTModel.LG_990_EMUHACC">
+              <MappingFragment StoreEntitySet="LG_990_EMUHACC">
+                <ScalarProperty Name="LOGICALREF" ColumnName="LOGICALREF" />
+                <ScalarProperty Name="ACTIVE" ColumnName="ACTIVE" />
+                <ScalarProperty Name="CODE" ColumnName="CODE" />
+                <ScalarProperty Name="DEFINITION_" ColumnName="DEFINITION_" />
+                <ScalarProperty Name="EXTNAME" ColumnName="EXTNAME" />
+                <ScalarProperty Name="SPECODE" ColumnName="SPECODE" />
+                <ScalarProperty Name="CYPHCODE" ColumnName="CYPHCODE" />
+                <ScalarProperty Name="UNITS" ColumnName="UNITS" />
+                <ScalarProperty Name="ADDINFOPTR" ColumnName="ADDINFOPTR" />
+                <ScalarProperty Name="CENTERREF" ColumnName="CENTERREF" />
+                <ScalarProperty Name="CURRDIFREF" ColumnName="CURRDIFREF" />
+                <ScalarProperty Name="SUBACCOUNTS" ColumnName="SUBACCOUNTS" />
+                <ScalarProperty Name="LEVEL_" ColumnName="LEVEL_" />
+                <ScalarProperty Name="GROUPCODE" ColumnName="GROUPCODE" />
+                <ScalarProperty Name="ACCTYPE" ColumnName="ACCTYPE" />
+                <ScalarProperty Name="QUANCTRL" ColumnName="QUANCTRL" />
+                <ScalarProperty Name="CENTERCTRL" ColumnName="CENTERCTRL" />
+                <ScalarProperty Name="EXTENREF" ColumnName="EXTENREF" />
+                <ScalarProperty Name="CAPIBLOCK_CREATEDBY" ColumnName="CAPIBLOCK_CREATEDBY" />
+                <ScalarProperty Name="CAPIBLOCK_CREADEDDATE" ColumnName="CAPIBLOCK_CREADEDDATE" />
+                <ScalarProperty Name="CAPIBLOCK_CREATEDHOUR" ColumnName="CAPIBLOCK_CREATEDHOUR" />
+                <ScalarProperty Name="CAPIBLOCK_CREATEDMIN" ColumnName="CAPIBLOCK_CREATEDMIN" />
+                <ScalarProperty Name="CAPIBLOCK_CREATEDSEC" ColumnName="CAPIBLOCK_CREATEDSEC" />
+                <ScalarProperty Name="CAPIBLOCK_MODIFIEDBY" ColumnName="CAPIBLOCK_MODIFIEDBY" />
+                <ScalarProperty Name="CAPIBLOCK_MODIFIEDDATE" ColumnName="CAPIBLOCK_MODIFIEDDATE" />
+                <ScalarProperty Name="CAPIBLOCK_MODIFIEDHOUR" ColumnName="CAPIBLOCK_MODIFIEDHOUR" />
+                <ScalarProperty Name="CAPIBLOCK_MODIFIEDMIN" ColumnName="CAPIBLOCK_MODIFIEDMIN" />
+                <ScalarProperty Name="CAPIBLOCK_MODIFIEDSEC" ColumnName="CAPIBLOCK_MODIFIEDSEC" />
+                <ScalarProperty Name="SITEID" ColumnName="SITEID" />
+                <ScalarProperty Name="RECSTATUS" ColumnName="RECSTATUS" />
+                <ScalarProperty Name="ORGLOGICALREF" ColumnName="ORGLOGICALREF" />
+                <ScalarProperty Name="WFSTATUS" ColumnName="WFSTATUS" />
+                <ScalarProperty Name="POSTINGONLY" ColumnName="POSTINGONLY" />
+                <ScalarProperty Name="CATEGORY" ColumnName="CATEGORY" />
+                <ScalarProperty Name="FTFLAGS" ColumnName="FTFLAGS" />
+                <ScalarProperty Name="MONETARY" ColumnName="MONETARY" />
+                <ScalarProperty Name="PROJECTCTRL" ColumnName="PROJECTCTRL" />
+                <ScalarProperty Name="NOTINFLATED" ColumnName="NOTINFLATED" />
+                <ScalarProperty Name="CURRDIFFDEBTREF" ColumnName="CURRDIFFDEBTREF" />
+                <ScalarProperty Name="INFDIFFACCREF" ColumnName="INFDIFFACCREF" />
+                <ScalarProperty Name="ISANBDGTLINE" ColumnName="ISANBDGTLINE" />
+                <ScalarProperty Name="BDGTACCREF" ColumnName="BDGTACCREF" />
+                <ScalarProperty Name="BDREFLACCREF" ColumnName="BDREFLACCREF" />
+                <ScalarProperty Name="BDGTPAYAREF" ColumnName="BDGTPAYAREF" />
+                <ScalarProperty Name="BDPAYREFLAREF" ColumnName="BDPAYREFLAREF" />
+                <ScalarProperty Name="CRBDGTACCLN" ColumnName="CRBDGTACCLN" />
+                <ScalarProperty Name="CRBDGTPAYALN" ColumnName="CRBDGTPAYALN" />
+                <ScalarProperty Name="CORPCODE1" ColumnName="CORPCODE1" />
+                <ScalarProperty Name="CORPCODE2" ColumnName="CORPCODE2" />
+                <ScalarProperty Name="CORPCODE3" ColumnName="CORPCODE3" />
+                <ScalarProperty Name="CORPCODE4" ColumnName="CORPCODE4" />
+                <ScalarProperty Name="FUNCCODE1" ColumnName="FUNCCODE1" />
+                <ScalarProperty Name="FUNCCODE2" ColumnName="FUNCCODE2" />
+                <ScalarProperty Name="FUNCCODE3" ColumnName="FUNCCODE3" />
+                <ScalarProperty Name="FUNCCODE4" ColumnName="FUNCCODE4" />
+                <ScalarProperty Name="FINCODE" ColumnName="FINCODE" />
+                <ScalarProperty Name="ECOCODE1" ColumnName="ECOCODE1" />
+                <ScalarProperty Name="ECOCODE2" ColumnName="ECOCODE2" />
+                <ScalarProperty Name="ECOCODE3" ColumnName="ECOCODE3" />
+                <ScalarProperty Name="ECOCODE4" ColumnName="ECOCODE4" />
+                <ScalarProperty Name="VATREFLAREF" ColumnName="VATREFLAREF" />
+                <ScalarProperty Name="VATREFLOTHAREF" ColumnName="VATREFLOTHAREF" />
+                <ScalarProperty Name="CCURRENCY" ColumnName="CCURRENCY" />
+                <ScalarProperty Name="CURRATETYPE" ColumnName="CURRATETYPE" />
+                <ScalarProperty Name="FIXEDCURRTYPE" ColumnName="FIXEDCURRTYPE" />
+                <ScalarProperty Name="CLDEF" ColumnName="CLDEF" />
+                <ScalarProperty Name="TAXNR" ColumnName="TAXNR" />
+                <ScalarProperty Name="FORTAXDECL" ColumnName="FORTAXDECL" />
+                <ScalarProperty Name="VATACC" ColumnName="VATACC" />
+                <ScalarProperty Name="GRPTRANSACCREF" ColumnName="GRPTRANSACCREF" />
+                <ScalarProperty Name="SPECODE2" ColumnName="SPECODE2" />
+                <ScalarProperty Name="SPECODE3" ColumnName="SPECODE3" />
+                <ScalarProperty Name="SPECODE4" ColumnName="SPECODE4" />
+                <ScalarProperty Name="SPECODE5" ColumnName="SPECODE5" />
+                <ScalarProperty Name="TCKNO" ColumnName="TCKNO" />
+                <ScalarProperty Name="ISPERSCOMP" ColumnName="ISPERSCOMP" />
+                <ScalarProperty Name="ISCASH" ColumnName="ISCASH" />
+                <ScalarProperty Name="TEXTINC" ColumnName="TEXTINC" />
+                <ScalarProperty Name="TEXTINCENG" ColumnName="TEXTINCENG" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
